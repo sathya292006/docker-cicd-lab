@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bigdata-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bigdata-app
+  template:
+    metadata:
+      labels:
+        app: bigdata-app
+    spec:
+      containers:
+        - name: bigdata-app
+          image: docker.io/sathyamozhi/bigdata-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
