@@ -1,4 +1,4 @@
-
+```yaml
 name: Docker CI Pipeline
 
 on:
@@ -55,4 +55,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: Sathyamozhi/bigdata-app:latest
+          tags: sathyamozhi/bigdata-app:latest
+```
